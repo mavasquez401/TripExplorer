@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Trip Explorer
 
-## Getting Started
+Trip Explorer is a full-stack travel planning app that allows users to discover random countries, save them to their favorites, and create personal travel itineraries. Built with **Next.js**, **Tailwind CSS**, **MongoDB (Docker)**, and **NextAuth**, the app supports Google authentication and persistent, user-specific trip management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🎲 Get a random country with capital, region, and flag
+- ⭐ Save countries to your favorites (per user)
+- 📝 Add personal **notes/itinerary** for each country
+- 🔄 Prevent duplicate favorites
+- 🗑 Remove trips from your list
+- 🔐 Google sign-in with session-based user control
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍💻 Tech Stack
 
-## Learn More
+| Layer       | Tools & Frameworks                          |
+| ----------- | ------------------------------------------- |
+| Frontend    | Next.js (App Router), React, Tailwind CSS   |
+| Backend/API | Node.js (Next.js API Routes), TypeScript    |
+| Auth        | NextAuth.js (Google OAuth)                  |
+| Database    | MongoDB (Docker container or Atlas)         |
+| Deployment  | Vercel (frontend), Docker (MongoDB locally) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🛠️ Prerequisites
 
-## Deploy on Vercel
+- Node.js 18+
+- Docker (for local MongoDB)
+- Google Cloud Console project with OAuth 2.0 credentials
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📦 Installation
+
+1.  **Clone the repo**
+
+    bash
+    git clone https://github.com/yourusername/trip-explorer.git
+    cd trip-explorer
+
+2.  **Install dependencies**
+
+    npm install
+
+3.  **Set up your environment variables**
+
+    Create a .env.local file in the root:
+
+    GOOGLE_CLIENT_ID=your-google-client-id
+    GOOGLE_CLIENT_SECRET=your-google-client-secret
+    NEXTAUTH_SECRET=super-secret-string
+    MONGODB_URI=mongodb://localhost:27017/trip-explorer
+
+4.  **Run MongoDB in Docker**
+
+    docker compose up -d
+
+5.  **Start the dev server**
+
+    npm run dev
+
+Folder Structure Highlight
+trip-explorer/
+├── src/
+│ ├── app/ # App Router pages & API routes
+│ ├── lib/ # Mongo connection & Auth config
+│ ├── styles/ # Tailwind/global styles
+│ └── components/ # (Optional) UI components
+├── docker-compose.yml # MongoDB container
+└── .env.local # Your environment config
+
+Created by Manuel Vasquez — inspired by real travel experiences and a desire to help users organize dream trips around the world.
