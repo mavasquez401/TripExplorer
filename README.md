@@ -68,12 +68,19 @@ Trip Explorer is a full-stack travel planning app that allows users to discover 
 
 Folder Structure Highlight
 trip-explorer/
+
 ├── src/
+
 │ ├── app/ # App Router pages & API routes
+
 │ ├── lib/ # Mongo connection & Auth config
+
 │ ├── styles/ # Tailwind/global styles
+
 │ └── components/ # (Optional) UI components
+
 ├── docker-compose.yml # MongoDB container
+
 └── .env.local # Your environment config
 
-Created by Manuel Vasquez — inspired by real travel experiences and a desire to help users organize dream trips around the world.
+### **Created by Manuel Vasquez — inspired by real travel experiences and a desire to help users organize dream trips around the world.**
